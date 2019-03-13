@@ -55,6 +55,12 @@ You can download compiled versions of Medis for Mac OS X from [the release page]
 
     $ rm -rf ./dist & npm run pack
 
+### 注意
+
+为了可以本地打包,把`BundleAnalyzerPlugin`关掉,且electron packager的osxSign中的type强制指定'development'(不过好像影响不大)  
+另外需要在electron packager的osxSign中添加`identity`字段做打包签名,可以本地使用的签名通过命令`security find-identity`可以查到  
+(如果查不到得网上找教程创建一个)  
+
 ## Connect to Heroku
 Medis can connect to Heroku Redis addon to manage your data. You just need to call `heroku redis:credentials --app APP` to get your redis credential:
 
