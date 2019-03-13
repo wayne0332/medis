@@ -52,6 +52,7 @@ You can download compiled versions of Medis for Mac OS X from [the release page]
     $ npm install
 
 2. Build DMG:
+(需要日志可以添加命令的环境变量`DEBUG=*`)  
 
     $ rm -rf ./dist & npm run pack
 
